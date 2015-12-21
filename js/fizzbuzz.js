@@ -33,13 +33,19 @@ $(document).ready(function () {
     Then use the functions
     ****************************/
 
-    var limit = prompt("Set the upper limit.");
+    //get the upper limit from the user input
+    var limit = prompt("Please set the upper limit to play FizzBuzz.");
 
-    //validate the input
-    if (/^\+?(0|[1-9]\d*)$/.test(limit)) {
+
+    var userInputCorrect = true;
+    //check if the limit is a number
+    while (Math.floor(limit) != limit) {
+        var limit = prompt("Your upper limit was not correct. Set it again.");
+        userInputCorrect = false;
+    }
+    //if the user inoput is a number then play the game
+    if (userInputCorrect = true) {
         fizzbuzz(limit);
-    } else {
-        var limit = prompt("Set the upper limit.");
     }
 
 });
