@@ -38,12 +38,12 @@ $(document).ready(function () {
 
     //by default we are assuming that the input is valid (setting a FLAG to true)
     var userInputCorrectFlag = true;
-    //make sure the are at least 3 characters
+    //make sure that there are at least 3 characters
     while (userInput.length < 3) {
         var userInput = prompt("Please enter 3 digits.");
         userInputCorrect = false;
     }
-    //make sure there are no spaces
+    //make sure that there are no spaces
     while (userInput.indexOf(' ') >= 0) {
         var userInput = prompt("Please don't enter spaces - try a number!");
         userInputCorrect = false;
@@ -54,7 +54,7 @@ $(document).ready(function () {
         //change the user input flag to false
         userInputCorrectFlag = false;
     }
-    //if the user inoput is a number then play the game
+    //if the user input is a number, then play the game
     if (userInputCorrectFlag = true) {
         fizzbuzz(limit);
     }
