@@ -36,15 +36,16 @@ $(document).ready(function () {
     //get the upper limit from the user input
     var limit = prompt("Please set the upper limit to play FizzBuzz.");
 
-
-    var userInputCorrect = true;
-    //check if the limit is a number
+    //by default we are assuming that the input is valid (setting a FLAG to true)
+    var userInputCorrectFlag = true;
+    //check if the limit is a number (if the rounded value of your number is the same with the initial number it means that the number was integer in the first place)
     while (Math.floor(limit) != limit) {
         var limit = prompt("Your upper limit was not correct. Set it again.");
-        userInputCorrect = false;
+        //change the user input flag to false
+        userInputCorrectFlag = false;
     }
     //if the user inoput is a number then play the game
-    if (userInputCorrect = true) {
+    if (userInputCorrectFlag = true) {
         fizzbuzz(limit);
     }
 
