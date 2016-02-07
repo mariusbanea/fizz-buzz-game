@@ -54,7 +54,7 @@ $(document).ready(function () {
         //change the user input flag to false
         userInputCorrectFlag = false;
     }
-    //if the user input is a number, then play the game
+    //if the user input is a number , then play the game
     if (userInputCorrectFlag = true) {
         fizzbuzz(limit);
     }
