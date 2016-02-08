@@ -39,12 +39,12 @@ $(document).ready(function () {
     //by default we are assuming that the input is valid (setting a FLAG to true)
     var userInputCorrectFlag = true;
     //make sure that there are at least 3 characters
-    while (userInput.length < 3) {
+    while (limit.length < 3) {
         var userInput = prompt("Please enter 3 digits.");
         userInputCorrect = false;
     }
     //make sure that there are no spaces
-    while (userInput.indexOf(' ') >= 0) {
+    while (limit.indexOf(' ') >= 0) {
         var userInput = prompt("Please don't enter spaces - try a number!");
         userInputCorrect = false;
     }
