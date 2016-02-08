@@ -39,13 +39,13 @@ $(document).ready(function () {
     //by default we are assuming that the input is valid (setting a FLAG to true)
     var userInputCorrectFlag = true;
     //make sure that there are at least 3 characters
-    while (limit.length < 3) {
-        var userInput = prompt("Please enter 3 digits.");
+    while (limit.length < 2) {
+        var limit = prompt("Please enter 2 digits.");
         userInputCorrect = false;
     }
     //make sure that there are no spaces
     while (limit.indexOf(' ') >= 0) {
-        var userInput = prompt("Please don't enter spaces - try a number!");
+        var limit = prompt("Please don't enter spaces - try a number!");
         userInputCorrect = false;
     }
     //check if the limit is a number (if the rounded value of your number is the same with the initial number it means that the number was integer in the first place)
