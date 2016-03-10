@@ -16,17 +16,17 @@ function validate(inputNumber) {
     //by default we are assuming that the input is valid (setting a FLAG to true)
     var userInputCorrectFlag = true;
 
-    //at least 3 characters
-    while (inputNumber.length < 2) {
-        var inputNumber = prompt("Please enter 2 digits or more.");
+    //at least 1 characters
+    while (inputNumber.length < 1) {
+        var inputNumber = prompt("Please enter 1 digit or more.");
         userInputCorrectFlag = false;
     }
     //no spaces
-    while (inputNumber.indexOf(' ') >= 0) {
+    while (inputNumber.indexOf(' ') > 0) {
         var inputNumber = prompt("Please don't enter spaces. Try a number!");
         userInputCorrectFlag = false;
     }
-    //the limit is a number (if the rounded value of your number is the same with the initial number, it means that the number was integer in the first place)
+    //the limit is a number (if the rounded value of your number (Math.floor(inputNumber)) is the same with the initial number (inputNumber), it means that the number (inputNumber) was integer in the first place)
     while (Math.floor(inputNumber) != inputNumber) {
         var inputNumber = prompt("Your upper limit was not a number. Set it again.");
         //change the user input flag to false
