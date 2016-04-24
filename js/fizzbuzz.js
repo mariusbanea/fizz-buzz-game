@@ -1,13 +1,20 @@
 /*BEGINNER - using if and else statements*/
 for (var counter = 1; counter <= 100; counter++) {
+    //add the most restrictive conditional first (less numbers are divisible by 3 AND 5)
     if ((counter % 3 == 0) && (counter % 5 == 0)) {
         var msg = "FizzBuzz";
-    } else if (counter % 5 == 0) {
+    }
+    //and a little less restrictive conditional after (more numbers are divisible by 5)
+    else if (counter % 5 == 0) {
         var msg = "Buzz";
-    } else if (counter % 3 == 0) {
+    }
+    //add the least restrictive conditional last (even more numbers are divisible by 3)
+    else if (counter % 3 == 0) {
         var msg = "Fizz";
-    } else {
-        //set the default value last
+    }
+    //set the default value last
+    else {
+
         var msg = counter;
     }
     console.log(msg);
@@ -17,7 +24,7 @@ for (var counter = 1; counter <= 100; counter++) {
 for (var counter = 1; counter <= 100; counter++) {
     //set the default value first
     var msg = counter;
-    //over-write the default values as we go throu the logic
+    //over-write the default values as we go throught the logic
     if (counter % 3 == 0) {
         msg = "Fizz";
     }
