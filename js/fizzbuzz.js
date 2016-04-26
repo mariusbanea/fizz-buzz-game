@@ -14,7 +14,6 @@ for (var counter = 1; counter <= 100; counter++) {
     }
     //set the default value last
     else {
-
         var msg = counter;
     }
     console.log(msg);
@@ -40,7 +39,7 @@ for (var counter = 1; counter <= 100; counter++) {
 /*SUPER ADVANCED - the shortest fizzbuzz possible*/
 for (var i = 1; i <= 100; i++) {
     var msg = "";
-    if (!(i % 3)) msg += "Fizz";
-    if (!(i % 5)) msg += "Buzz";
+    if (i % 3 == 0) msg += "Fizz";
+    if (i % 5 == 0) msg += "Buzz";
     console.log(msg || i);
 }
