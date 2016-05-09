@@ -1,3 +1,22 @@
+/*How the modulus works:
+
+Let's say we have the code example:
+
+var number = 22;
+
+if(number % 3 == 0) {
+    console.log("Number is divisible by 3");
+}
+
+The meaning of the code above:
+
+If the number (in this case "22") divided by 3 has a remainder 0
+(in this case the remainder is 1 because 3 x 7 = 21 so there is 1 more which needs to be divided by 3),
+it means that the number is divisible by 3 (in this case it is NOT)
+*/
+
+
+
 /*BEGINNER - using if and else statements*/
 for (var counter = 1; counter <= 100; counter++) {
     //add the most restrictive conditional first (less numbers are divisible by 3 AND 5)
@@ -23,7 +42,7 @@ for (var counter = 1; counter <= 100; counter++) {
 for (var counter = 1; counter <= 100; counter++) {
     //set the default value first
     var msg = counter;
-    //over-write the default values as we go throught the logic
+    //over-write the default values as we go through the logic
     if (counter % 3 == 0) {
         msg = "Fizz";
     }
