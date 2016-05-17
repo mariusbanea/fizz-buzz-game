@@ -6,6 +6,18 @@
 - PART 3.2 => for each number check it and output the result
 */
 
+
+/* How the elements are working together in this app?
+
+var limit (line 89 gets the input from the user)
+... and then ...
+---> function "validate" (called at line 92 and defined at line 26: checks the input from the user and if it is valid is going to play the game)
+... and then ...
+-------> function "fizzbuz" (called at line line 50 and defined at line 55: start counting from the 1 the "limit")
+... and then ...
+-----------> function "check" (called at line line 59 and defined at line 64: which is checking if the counter is fizz, buzz of fizzbuzz)
+*/
+
 /****************************
 First declare the functions
 ****************************/
@@ -33,7 +45,7 @@ function validate(inputNumber) {
         userInputCorrectFlag = false;
     }
 
-    //PART 3 => if the limit is a number, then play the game
+    //PART 3 => if the limit is valid, then play the game
     if (userInputCorrectFlag = true) {
         fizzbuzz(inputNumber);
     }
