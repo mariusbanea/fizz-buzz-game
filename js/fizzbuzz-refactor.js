@@ -11,11 +11,11 @@
 
 var limit (line 89 gets the input from the user)
 ... and then ...
----> function "validate" (called at line 92 and defined at line 26: checks the input from the user and if it is valid is going to play the game)
+---> function "validateInput" (called at line 92 and defined at line 26: checks the input from the user and if it is valid is going to play the game)
 ... and then ...
--------> function "fizzbuz" (called at line line 50 and defined at line 55: start counting from the 1 the "limit")
+-------> function "playFizzBuzz" (called at line line 50 and defined at line 55: start counting from the 1 the "limit")
 ... and then ...
------------> function "check" (called at line line 59 and defined at line 64: which is checking if the counter is fizz, buzz of fizzbuzz)
+-----------> function "checkFizzAndBuzz" (called at line line 59 and defined at line 64: which is checking if the counter is fizz, buzz of fizzbuzz)
 */
 
 /****************************
@@ -23,7 +23,7 @@ First declare the functions
 ****************************/
 
 //PART 2 => continuing the validation
-function validate(inputNumber) {
+function validateInput(inputNumber) {
 
     //by default we are assuming that the input is valid (setting a FLAG to true)
     var userInputCorrectFlag = true;
@@ -47,21 +47,21 @@ function validate(inputNumber) {
 
     //PART 3 => if the limit is valid, then play the game
     if (userInputCorrectFlag = true) {
-        fizzbuzz(inputNumber);
+        playFizzBuzz(inputNumber);
     }
 }
 
 //PART 3.1 => fizzbuz function is counting
-function fizzbuzz(limit) {
+function playFizzBuzz(limit) {
 
     //loop through all the numbers and call the check counter function
     for (var counter = 1; counter <= limit; counter++) {
-        $('#showResults').append(check(counter));
+        $('#showResults').append(checkFizzAndBuzz(counter));
     }
 }
 
 //PART 3.2 => check the each number and show the results
-function check(currentNumber) {
+function checkFizzAndBuzz(currentNumber) {
 
     //set the default value for the msg variable
     var msg = "<li>" + currentNumber + "</li>";
@@ -89,6 +89,6 @@ $(document).ready(function () {
     var limit = prompt("Please set the upper limit to play FizzBuzz.");
 
     //PART 2 => Starting the validation
-    validate(limit);
+    validateInput(limit);
 
 });
