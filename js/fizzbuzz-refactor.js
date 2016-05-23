@@ -54,7 +54,7 @@ function validateInput(inputNumber) {
 //PART 3.1 => fizzbuz function is counting
 function playFizzBuzz(limit) {
 
-    //loop through all the numbers and call the check counter function
+    //loop through all the numbers and call the check counter function and the results to the OL (ordered list from the index.html)
     for (var counter = 1; counter <= limit; counter++) {
         $('#showResults').append(checkFizzAndBuzz(counter));
     }
@@ -72,7 +72,7 @@ function checkFizzAndBuzz(currentNumber) {
     if (currentNumber % 5 == 0) {
         msg = "<li>Buzz</li>";
     }
-    if (currentNumber % 15 == 0) {
+    if ((currentNumber % 3 == 0) && (currentNumber % 5 == 0)) {
         msg = "<li>FizzBuzz</li>";
     }
     //output the msg
