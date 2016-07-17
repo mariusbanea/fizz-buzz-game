@@ -33,7 +33,7 @@ function validateInput(inputNumber) {
         var inputNumber = prompt("Please enter 1 digit or more.");
         userInputCorrectFlag = false;
     }
-    //no spaces
+    //if there are spaces (OR the number of spaces is larger than 0)
     while (inputNumber.indexOf(' ') > 0) {
         var inputNumber = prompt("Please don't enter spaces. Try a number!");
         userInputCorrectFlag = false;
