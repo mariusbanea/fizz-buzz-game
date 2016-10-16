@@ -12,7 +12,7 @@ The meaning of the code above:
 
 If the number (in this case "22") divided by 3 has a remainder 0
 (in this case the remainder is 1 because 3 x 7 = 21 so there is 1 more which needs to be divided by 3),
-it means that the number is divisible by 3 (in this case it is NOT)
+it means that the number 22 is NOT divisible by 3
 */
 
 
@@ -56,9 +56,9 @@ for (var counter = 1; counter <= 100; counter++) {
 }
 
 /*SUPER ADVANCED - the shortest fizzbuzz possible*/
-for (var i = 1; i <= 100; i++) {
+for (var counter = 1; counter <= 100; counter++) {
     var msg = "";
-    if (i % 3 == 0) msg += "Fizz";
-    if (i % 5 == 0) msg += "Buzz";
-    console.log(msg || i);
+    if (counter % 3 == 0) msg += "Fizz";
+    if (counter % 5 == 0) msg += "Buzz";
+    console.log(msg || counter);
 }
