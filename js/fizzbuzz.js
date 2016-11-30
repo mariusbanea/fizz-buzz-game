@@ -38,7 +38,7 @@ for (var counter = 1; counter <= 100; counter++) {
     console.log(msg);
 }
 
-/*ADVANCED - using if statements only*/
+/*INTERMEDIATE - using if statements only*/
 for (var counter = 1; counter <= 100; counter++) {
     //set the default value first
     var msg = counter;
@@ -55,10 +55,16 @@ for (var counter = 1; counter <= 100; counter++) {
     console.log(msg);
 }
 
-/*SUPER ADVANCED - the shortest fizzbuzz possible*/
+/*ADVANCED - the 4 lines fizzbuzz*/
 for (var counter = 1; counter <= 100; counter++) {
     var msg = "";
     if (counter % 3 == 0) msg += "Fizz";
     if (counter % 5 == 0) msg += "Buzz";
     console.log(msg || counter);
+}
+
+/*SUPER ADVANCED - the shortest fizzbuzz possible*/
+for (var counter = 1; counter <= 100; counter++) {
+    var fizz = counter % 3 == 0, buzz = counter % 5 == 0;
+    console.log(fizz ? buzz ? "FizzBuzz" : "Fizz" : fizz ? "Buzz" : counter);
 }
