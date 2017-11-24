@@ -65,6 +65,8 @@ for (var counter = 1; counter <= 100; counter++) {
 
 /*SUPER ADVANCED - the shortest fizzbuzz possible*/
 for (var counter = 1; counter <= 100; counter++) {
-    var fizz = counter % 3 == 0, buzz = counter % 5 == 0;
-    console.log(fizz ? buzz ? "FizzBuzz" : "Fizz" : fizz ? "Buzz" : counter);
+    var fizz = counter % 3 == 0,
+        buzz = counter % 5 == 0;
+    //thanks to Margaret B. for her contribution
+    console.log(fizz ? (buzz ? "FizzBuzz" : "Fizz") : (buzz ? "Buzz" : i));
 }
