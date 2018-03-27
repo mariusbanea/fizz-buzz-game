@@ -70,3 +70,25 @@ for (var counter = 1; counter <= 100; counter++) {
     //thanks to Margaret B. for her contribution
     console.log(fizz ? (buzz ? "FizzBuzz" : "Fizz") : (buzz ? "Buzz" : i));
 }
+
+// fizz ? (buzz ? "FizzBuzz" : "Fizz") : (buzz ? "Buzz" : i) are ternary operators
+// (https://github.com/mariusbanea/web-developers-toolkit/blob/master/js/ternary-operators.jpg)
+
+// using the ternary operators translator http://converter.website-dev.eu/
+
+//this line fizz ? (buzz ? "FizzBuzz" : "Fizz") : (buzz ? "Buzz" : i)
+
+//is translated to this
+//if (fizz) {
+//    if ((buzz) {
+//            "FizzBuzz"
+//        } else {
+//            "Fizz")
+//    }
+//} else {
+//    if ((buzz) {
+//            "Buzz"
+//        } else {
+//            i)
+//    }
+//}
